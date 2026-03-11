@@ -1,0 +1,28 @@
+1.Show command that will display a brief summary of the IPv6 interface status.
+
+R1#show ipv6 interface brief
+
+
+2. Verify connectivity from R1 to PC2.
+R1#show ipv6 route
+
+
+3. Enable the router to forward IPv6 packets.
+R1 # ipv6 unicast-routing
+
+Step 2: Configure IPv6 addressing on GigabitEthernet0/0.
+
+a.     Enter the commands necessary to move to interface configuration mode for GigabitEthernet0/0.
+R1# interface gigaethernet 0/0 
+
+b.     Configure the IPv6 address with the following command:
+
+R1(config-if)# ipv6 address 2001:db8:1:1::1/64
+
+c.     Configure the link-local IPv6 address with the following command:
+
+R1(config-if)# ipv6 address fe80::1 link-local
+
+d.     Activate the interface.
+
+R1(config-if)# no shutdown
